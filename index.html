@@ -57,7 +57,9 @@ let quotesArray = [
 ]
 let randomNumber = Math.floor(Math.random() * quotesArray.length); //generates a random number between 0-6 (covers all items in the array) stores that vale in a variable called randomNumber
 
-document.getElementById('press-quote').textContent = quotesArray[randomNumber]; // changes the text content of #press-quote element to one of the items in the quotesArray using a random number as the index selector
+document.getElementById('press-quote').textContent = '"' + quotesArray[randomNumber].split(' — ')[0] + '"'; // changes the text content of #press-quote element to one of the items in the quotesArray using a random number as the index selector
+
+console.log(quotesArray[randomNumber].split(' — ')[0])
 
 </script>
 
